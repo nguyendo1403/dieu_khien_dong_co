@@ -96,19 +96,32 @@ def gui_doc_du_lieu_dc1():
  
 
           
+# def listenermodbus():
+#     rospy.init_node('listener', anonymous=True)
+#     time.sleep(0.001)
+#     # rospy.Subscriber('modbus', String, callback)
+
+# start_time = time.time()
+# while (True):
+#     listenermodbus()
+#     elapsed_time=time.time() - start_time
+#     if elapsed_time >= 1:
+        
+#         gui_doc_du_lieu_dc1()
+#         print("------")
+#         start_time = time.time()
+
 def listenermodbus():
     rospy.init_node('listener', anonymous=True)
-    time.sleep(0.001)
-    # rospy.Subscriber('modbus', String, callback)
+    rospy.Subscriber('modbus', String, callback)
 
-start_time = time.time()
-while (True):
+def main():
     listenermodbus()
-    elapsed_time=time.time() - start_time
-    if elapsed_time >= 1:
-        
+    while True:
         gui_doc_du_lieu_dc1()
-        print("------")
-        start_time = time.time()
+        time.sleep(1)
+
+if __name__ == '__main__':
+    main()
 
 
