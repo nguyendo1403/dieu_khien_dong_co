@@ -45,7 +45,6 @@ client.write_registers(0x7D,0x1A, unit = 0X0001)
 client.write_registers(0x7D,0x1A, unit = 0X0002)
 
 
-
 def callback(data):
     # rospy.loginfo("RECEIVED DATA: %s", data.data) 
     dulieu=data.data
@@ -98,21 +97,33 @@ def guidulieu():
     print("done",v11,v22)
     print("------")
    
+# def listenermodbus():
+#     rospy.init_node('listenerdc1', anonymous=True)
+#     time.sleep(0.3)
+#     rospy.Subscriber('modbus', String, callback)
+#     # rospy.spin()
+
+# start_time = time.time()
+# while (True):
+
+#     listenermodbus()
+#     elapsed_time=time.time() - start_time
+    
+#     if elapsed_time >= 0.3:
+        
+#         guidulieu()
+#         start_time = time.time()
+
 def listenermodbus():
     rospy.init_node('listenerdc1', anonymous=True)
-    time.sleep(0.3)
     rospy.Subscriber('modbus', String, callback)
-    # rospy.spin()
 
-start_time = time.time()
-while (True):
-
+def main():
     listenermodbus()
-    elapsed_time=time.time() - start_time
-    
-    if elapsed_time >= 0.3:
-        
+    while True:
         guidulieu()
-        start_time = time.time()
+        time.sleep(0.01)
 
+if __name__ == '__main__':
+    main()
 
