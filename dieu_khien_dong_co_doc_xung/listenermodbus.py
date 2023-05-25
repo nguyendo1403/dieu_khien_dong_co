@@ -111,20 +111,35 @@ def doc_dulieu():
     print("done2")
 
     
-def listenermodbus():
-    rospy.init_node('listener', anonymous=True)
-    time.sleep(0.01)
-    rospy.Subscriber('modbus', String, callback)
+# def listenermodbus():
+#     rospy.init_node('listener', anonymous=True)
+#     time.sleep(0.01)
+#     rospy.Subscriber('modbus', String, callback)
     
 
    
-start_time = time.time() 
-while (True):
+# start_time = time.time() 
+# while (True):
+#     listenermodbus()
+#     elapsed_time=time.time() - start_time
+#     if elapsed_time >= 0.01:
+#         gui_dulieu()
+#         doc_dulieu()
+#         start_time = time.time()
+        
+def listenermodbus():
+    rospy.init_node('listener', anonymous=True)
+    rospy.Subscriber('modbus', String, callback)
+
+def main():
     listenermodbus()
-    elapsed_time=time.time() - start_time
-    if elapsed_time >= 0.01:
-        gui_dulieu()
+    while True:
+        guidulieu()
         doc_dulieu()
-        start_time = time.time()
+        time.sleep(0.01)
+
+if __name__ == '__main__':
+    main()
+        
 
 
