@@ -134,7 +134,7 @@ def listenermodbus():
 def main():
     listenermodbus()
     while True:
-        guidulieu()
+        gui_dulieu()
         doc_dulieu()
         time.sleep(0.01)
 
