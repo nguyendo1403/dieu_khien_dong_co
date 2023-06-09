@@ -76,22 +76,22 @@ def guidulieu():
    
         
     if (v11 < 0) and (v22 > 0):
-        client.write_registers(0x0485,abs(v11), unit = 0x0002)
-        client.write_registers(0x0485,abs(v22), unit = 0x0001)
-        client.write_registers(0x7D,0x1A, unit = 0x0002)
-        client.write_registers(0x7D,0x3A, unit = 0x0001)
+        client.write_registers(0x0485,abs(v11), unit = 0x0001)
+        client.write_registers(0x0485,abs(v22), unit = 0x0002)
+        client.write_registers(0x7D,0x1A, unit = 0x0001)
+        client.write_registers(0x7D,0x3A, unit = 0x0002)
         print("v11<0 and v22>0")
         
     if (v11 > 0) and (v22 <  0):
-        client.write_registers(0x0485,abs(v11), unit = 0x0002)       
-        client.write_registers(0x0485,abs(v22), unit = 0x0001)
-        client.write_registers(0x7D,0x3A, unit = 0x0002)
-        client.write_registers(0x7D,0x1A, unit = 0x0001)
+        client.write_registers(0x0485,abs(v11), unit = 0x0001)       
+        client.write_registers(0x0485,abs(v22), unit = 0x0002)
+        client.write_registers(0x7D,0x3A, unit = 0x0001)
+        client.write_registers(0x7D,0x1A, unit = 0x0002)
         print("v11>0 and v22<0")
         
     if (v11==0) and (v22==0):
-        client.write_registers(0x0485,0x0000, unit = 0X0002)
-        client.write_registers(0x0485,0x0000, unit = 0X0001)  
+        client.write_registers(0x0485,0x0000, unit = 0X0001)
+        client.write_registers(0x0485,0x0000, unit = 0X0002)  
         print("v11==0 and v22==0")
     
     print("done",v11,v22)
