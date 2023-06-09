@@ -32,82 +32,82 @@ def callback(data):
     #re phai 
     elif((y0 >= -0.25) and (y0 <= 0.25) and (x0 > 0)):         
         v1 = (-1)*abs(x0)
-        v2 = abs(x0)/2
+        v2 = abs(x0)*(2/3)
     #re trai  
     elif((y0 >= -0.25) and (y0 <= 0.25) and (x0 <= 0)):             
-        v1 = (-1)*(abs(x0))/2
+        v1 = (-1)*(abs(x0))*(2/3)
         v2 = abs(x0)
     #chay thang phai
     elif((x0>0.25) and (y0>0.25) and (abs(y0)>abs(x0))):   
         if (abs(x0)+abs(y0)>=1): 
             v1 = -1
-            v2 = 1/2
+            v2 = 1*(2/3)
         else:   
             v1 = (-1)*abs(y0)
-            v2 = abs(y0)/2
+            v2 = abs(y0)*(2/3)
     elif((x0>0.25) and (y0>0.25) and (abs(y0)==abs(x0))):   
         v1 = (-1)*abs(y0) 
-        v2 = abs(y0)/2
+        v2 = abs(y0)*(2/3)
     elif((x0>0.25) and (y0>0.25) and (abs(y0)<abs(x0))):
         if (abs(x0)+abs(y0)>=1): 
             v1 = (-1)*1         #
-            v2 = 1/2                  
+            v2 = 1*(2/3)                  
         else:
             v1 = (-1)*(abs(x0))
-            v2 = (abs(x0))/2 
+            v2 = (abs(x0))*(2/3) 
     #chay lui phai
     elif((x0>0.25) and (y0<-0.25) and (abs(x0)>abs(y0))): 
         if (abs(x0)+abs(y0)>=1):
-            v1=1/2
+            v1=1*(2/3)
             v2=-1
         else:  
-            v1 = (abs(x0))/2                         
+            v1 = (abs(x0))*(2/3)                         
             v2 = (-1)* (abs(x0))        
     elif((x0>0.25) and (y0<-0.25) and (abs(x0)==abs(y0))) :        
-        v1 = (abs(x0))/2
+        v1 = (abs(x0))*(2/3)
         v2 = (-1)*abs(x0)        
     elif((x0>0.25) and (y0<-0.25) and (abs(x0)<abs(y0))) : 
         if (abs(x0)+abs(y0)>=1):
-            v1=1/2
+            v1=1*(2/3)
             v2=-1
         else:  
-            v1 = (abs(y0))/2                         
+            v1 = (abs(y0))*(2/3)                         
             v2 = (-1)* (abs(y0))
     #chay lui trai
     elif((x0<-0.25) and (y0<-0.25) and (abs(x0)<abs(y0))): 
         if (abs(x0)+abs(y0)>=1):
             v1=1
-            v2=-1/2
+            v2=-1*(2/3)
         else:  
             v1 = (abs(y0))                        
-            v2 = (-1)* (abs(y0))/2        
+            v2 = (-1)* (abs(y0))*(2/3)        
     elif((x0<-0.25) and (y0<-0.25) and (abs(x0)==abs(y0))) :        
         v1 = (abs(x0))
-        v2 = (-1)*abs(x0)/2       
+        v2 = (-1)*abs(x0)*(2/3)      
     elif((x0<-0.25) and (y0<-0.25) and (abs(x0)>abs(y0))) : 
         if (abs(x0)+abs(y0)>=1):
             v1=1
-            v2=-1/2
+            v2=-1*(2/3)
         else:  
             v1 = (abs(x0))                       
-            v2 = (-1)* (abs(x0))/2   
+            v2 = (-1)* (abs(x0))*(2/3)   
     #chay thang trai
     elif((x0<-0.25) and (y0>0.25) and (abs(y0)<abs(x0))):   
         if (abs(x0)+abs(y0)>=1): 
-            v1 = -1/2
+            v1 = -1*(2/3)
             v2 = 1
         else:   
-            v1 = (-1)*abs(x0)/2
+            v1 = (-1)*abs(x0)*(2/3)
             v2 = abs(x0)
     elif((x0<-0.25) and (y0>0.25) and (abs(y0)==abs(x0))):   
-        v1 = (-1)*abs(y0)/2 
+        v1 = (-1)*abs(y0)*(2/3) 
         v2 = abs(y0)
     elif((x0<-0.25) and (y0>0.25) and (abs(y0)>abs(x0))):
         if (abs(x0)+abs(y0)>=1): 
-            v1 = (-1)/2         #
+            v1 = (-1)*(2/3)         #
             v2 = 1                  
         else:
-            v1 = (-1)*(abs(y0))/2
+            v1 = (-1)*(abs(y0))*(2/3)
             v2 = (abs(y0))
     #dung
     else:
@@ -123,8 +123,8 @@ def callback(data):
     global v11
     global v22
         
-    v11=((v1*1000)/1) #xu li van toc cho dong co 1  
-    v22=((v2*1000)/1) #xu li van toc cho dong co 2 
+    v11=((v1*2000)/1) #xu li van toc cho dong co 1  
+    v22=((v2*2000)/1) #xu li van toc cho dong co 2 
        
     v11 = str(v11)
     v22 = str(v22)
