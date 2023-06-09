@@ -25,18 +25,26 @@ def callback(data):
     if((x0 >= -0.25) and (x0 <= 0.25) and (y0 > 0)):           
          v1 = (-1)*abs(y0)
          v2 = abs(y0)
+         print("thang")
+         
     #chay lui
-    elif ((x0 >= -0.25) and (x0 <= 0.25) and (y0 <= 0)):              
+    elif ((x0 >= -0.25) and (x0 <= 0.25) and (y0 < 0)):              
         v1 = abs(y0)
-        v2 = (-1)*abs(y0)     
+        v2 = (-1)*abs(y0)
+        print("lui")   
+         
     #re phai 
     elif((y0 >= -0.25) and (y0 <= 0.25) and (x0 > 0)):         
         v1 = (-1)*abs(x0)
         v2 = abs(x0)*(2/3)
+        print("phai")
+        
     #re trai  
-    elif((y0 >= -0.25) and (y0 <= 0.25) and (x0 <= 0)):             
+    elif((y0 >= -0.25) and (y0 <= 0.25) and (x0 <0)):             
         v1 = (-1)*(abs(x0))*(2/3)
         v2 = abs(x0)
+        print("trai")
+        
     #chay thang phai
     elif((x0>0.25) and (y0>0.25) and (abs(y0)>abs(x0))):   
         if (abs(x0)+abs(y0)>=1): 
@@ -131,9 +139,11 @@ def callback(data):
 
     giatrigui = v11 + "," + v22  
     print("gia tri gui la:",giatrigui)
+    print(x0,y0)
+    print("---")
     pub.publish(giatrigui)  
     
-    print(x0,y0)
+    
 
 
         
