@@ -53,9 +53,12 @@ def callback(data):
         else:   
             v1 = (-1)*abs(y0)
             v2 = abs(y0)*(2/3)
+        print("chay thang phai")
+          
     elif((x0>0.25) and (y0>0.25) and (abs(y0)==abs(x0))):   
         v1 = (-1)*abs(y0) 
         v2 = abs(y0)*(2/3)
+        print("chay thang phai")
     elif((x0>0.25) and (y0>0.25) and (abs(y0)<abs(x0))):
         if (abs(x0)+abs(y0)>=1): 
             v1 = (-1)*1         #
@@ -63,6 +66,7 @@ def callback(data):
         else:
             v1 = (-1)*(abs(x0))
             v2 = (abs(x0))*(2/3) 
+        print("chay thang phai")
     #chay lui phai
     elif((x0>0.25) and (y0<-0.25) and (abs(x0)>abs(y0))): 
         if (abs(x0)+abs(y0)>=1):
@@ -70,10 +74,12 @@ def callback(data):
             v2=-1
         else:  
             v1 = (abs(x0))*(2/3)                         
-            v2 = (-1)* (abs(x0))        
+            v2 = (-1)* (abs(x0))  
+        print("chay lui phai")
     elif((x0>0.25) and (y0<-0.25) and (abs(x0)==abs(y0))) :        
         v1 = (abs(x0))*(2/3)
-        v2 = (-1)*abs(x0)        
+        v2 = (-1)*abs(x0)    
+        print("chay lui phai")
     elif((x0>0.25) and (y0<-0.25) and (abs(x0)<abs(y0))) : 
         if (abs(x0)+abs(y0)>=1):
             v1=1*(2/3)
@@ -81,6 +87,7 @@ def callback(data):
         else:  
             v1 = (abs(y0))*(2/3)                         
             v2 = (-1)* (abs(y0))
+        print("chay lui phai")
     #chay lui trai
     elif((x0<-0.25) and (y0<-0.25) and (abs(x0)<abs(y0))): 
         if (abs(x0)+abs(y0)>=1):
@@ -88,17 +95,22 @@ def callback(data):
             v2=-1*(2/3)
         else:  
             v1 = (abs(y0))                        
-            v2 = (-1)* (abs(y0))*(2/3)        
+            v2 = (-1)* (abs(y0))*(2/3) 
+        print("chay lui trai")
     elif((x0<-0.25) and (y0<-0.25) and (abs(x0)==abs(y0))) :        
         v1 = (abs(x0))
-        v2 = (-1)*abs(x0)*(2/3)      
+        v2 = (-1)*abs(x0)*(2/3) 
+        print("chay lui trai")
+
     elif((x0<-0.25) and (y0<-0.25) and (abs(x0)>abs(y0))) : 
         if (abs(x0)+abs(y0)>=1):
             v1=1
             v2=-1*(2/3)
         else:  
             v1 = (abs(x0))                       
-            v2 = (-1)* (abs(x0))*(2/3)   
+            v2 = (-1)* (abs(x0))*(2/3)
+        print("chay lui trai")
+
     #chay thang trai
     elif((x0<-0.25) and (y0>0.25) and (abs(y0)<abs(x0))):   
         if (abs(x0)+abs(y0)>=1): 
@@ -107,9 +119,13 @@ def callback(data):
         else:   
             v1 = (-1)*abs(x0)*(2/3)
             v2 = abs(x0)
+        print("chay thang trai")
+
     elif((x0<-0.25) and (y0>0.25) and (abs(y0)==abs(x0))):   
         v1 = (-1)*abs(y0)*(2/3) 
         v2 = abs(y0)
+        print("chay thang trai")
+
     elif((x0<-0.25) and (y0>0.25) and (abs(y0)>abs(x0))):
         if (abs(x0)+abs(y0)>=1): 
             v1 = (-1)*(2/3)         #
@@ -117,6 +133,8 @@ def callback(data):
         else:
             v1 = (-1)*(abs(y0))*(2/3)
             v2 = (abs(y0))
+        print("chay thang trai")
+
     #dung
     else:
         v1 = 0
