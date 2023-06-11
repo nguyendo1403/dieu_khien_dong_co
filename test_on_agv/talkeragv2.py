@@ -144,7 +144,7 @@ def callback(data):
     if (x0 == 0) and (y0 == 0):
         v1 = 0
         v2 = 0
-        ptrint("dung")
+        print("dung")
        
        
     global v11
