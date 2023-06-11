@@ -122,7 +122,7 @@ def main():
     listenermodbus()
     while True:
         guidulieu()
-        time.sleep(0.01)
+        time.sleep(0.1)
 
 if __name__ == '__main__':
     main()
