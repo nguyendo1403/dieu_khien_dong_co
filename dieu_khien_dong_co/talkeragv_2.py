@@ -151,10 +151,10 @@ def callback(data):
     global v22
 
     # xu li van toc cho dong co 1    
-    v11=((v1*50)/1)*240 
+    v11=((v1*25)/1)*240 
         
     # xu li van toc cho dong co 2    
-    v22=((v2*50)/1)*240
+    v22=((v2*25)/1)*240
        
     v11 = str(v11)
     v22 = str(v22)
