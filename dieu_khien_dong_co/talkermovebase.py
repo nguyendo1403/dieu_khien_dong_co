@@ -47,7 +47,7 @@ def callback(data):
         print("trai")
         
     #chay thang phai
-    elif((x0>0.25) and (y0>0.25) and (abs(y0)>abs(x0))): 
+    elif((x0>0.25) and (y0>0.25) and ): 
         v1=(-1)*abs(y0 + x0*(width/2))
         v2=abs(y0 - x0*(width/2))
 
@@ -55,14 +55,14 @@ def callback(data):
             v1=-1
             v2=abs(y0 - x0*(width/2))
     #chay lui phai
-    elif((x0>0.25) and (y0<-0.25) and (abs(x0)>abs(y0))): 
+    elif((x0>0.25) and (y0<-0.25)): 
         v1=abs(y0 + x0*(width/2))
         v2=(-1)*abs(y0 - x0*(width/2))
         if (abs(v2)>=1):
             v1=abs(y0 + x0*(width/2))
             v2=(-1)
     #chay lui trai
-    elif((x0<-0.25) and (y0<-0.25) and (abs(x0)<abs(y0))): 
+    elif((x0<-0.25) and (y0<-0.25)): 
         v1=abs(y0 + x0*(width/2))
         v2=(-1)*abs(y0 - x0*(width/2))
         if (abs(v1)>=1):
@@ -70,7 +70,7 @@ def callback(data):
             v2=(-1)*abs(y0 - x0*(width/2))
 
     #chay thang trai
-    elif((x0<-0.25) and (y0>0.25) and (abs(y0)<abs(x0))):   
+    elif((x0<-0.25) and (y0>0.25)):   
         v1=(-1)*abs(y0 + x0*(width/2))
         v2=abs(y0 - x0*(width/2))
         if (abs(v2)>=1):
